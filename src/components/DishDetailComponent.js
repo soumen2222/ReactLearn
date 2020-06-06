@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
 class DishDetail extends Component {
   render() {
-    return this.renderDish(this.props.dishItem);
+    return <div className="container">{this.renderDish(this.props.dish)}</div>;
   }
 
   renderDish(dishItem) {
@@ -45,11 +45,11 @@ class DishDetail extends Component {
     });
 
     return (
-      <div className="row">
-        <div className="col-12 col-md-5 m-1">
+      <div className="container">
+        <div className="row">
           <h4>Comments</h4>
+          <ul className="list-unstyled">{commentMenu}</ul>
         </div>
-        <ul className="list-unstyled">{commentMenu}</ul>
       </div>
     );
   }
